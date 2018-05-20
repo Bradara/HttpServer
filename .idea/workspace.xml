@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09fc971f-7510-4869-bd79-23d3c6b9d55e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javache/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javache/RequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HttpServer/javache/RequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HttpServer/javache/RequestHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HttpServer/resources/pages/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HttpServer/resources/pages/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HttpServer/resources/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HttpServer/resources/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HttpServer/resources/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HttpServer/resources/pages/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HttpServer/resources/pages/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HttpServer/resources/pages/register.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -311,12 +313,20 @@
       <option name="presentableId" value="Default" />
       <updated>1526573991989</updated>
       <workItem from="1526573993332" duration="35102000" />
-      <workItem from="1526785616185" duration="1211000" />
+      <workItem from="1526785616185" duration="1881000" />
     </task>
+    <task id="LOCAL-00001" summary="Added favicon">
+      <created>1526786868953</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1526786868954</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36313000" />
+    <option name="totallyTimeSpent" value="36983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1045" extended-state="6" />
@@ -357,6 +367,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added favicon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added favicon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
