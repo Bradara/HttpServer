@@ -4,10 +4,7 @@ import javache.http.HttpRequest;
 import javache.http.HttpRequestImpl;
 import javache.http.HttpResponse;
 import javache.http.HttpResponseImpl;
-import javache.io.Reader;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -23,6 +20,8 @@ public class RequestHandler {
         this.httpResponse = new HttpResponseImpl();
         String requestUrl = this.httpRequest.getRequestUrl();
 
+        if(requestUrl.equals("/")) requestUrl = "/index";
+
         if (this.httpRequest.isResources()) {
             String path = WebConstants.RESOURCE_FOLDER + requestUrl;
             return getResource(path);
@@ -37,20 +36,21 @@ public class RequestHandler {
 
         try {
             String type = Files.probeContentType(pathToRes);
-            httpResponse.addHeader("Content-Type", type);
-            httpResponse.setStatusCode(200);
-            httpResponse.setContent(Files.readAllBytes(pathToRes));
+            this.httpResponse.addHeader("Content-Type", type);
+            this.httpResponse.addHeader("Content-Disposition", "inline");
+            this.httpResponse.setStatusCode(200);
+            this.httpResponse.setContent(Files.readAllBytes(pathToRes));
         } catch (IOException e) {
             Path path404 = Paths.get(WebConstants.PAGE_FOLDER + "/404.html");
-            httpResponse.setStatusCode(404);
+            this.httpResponse.setStatusCode(404);
             try {
-                httpResponse.setContent(Files.readAllBytes(path404));
+                this.httpResponse.setContent(Files.readAllBytes(path404));
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
         }
 
-        return httpResponse.getBytes();
+        return this.httpResponse.getBytes();
     }
 
 
